@@ -1,0 +1,116 @@
+/********************************************************/
+/*                          Sign up                     */
+/********************************************************/
+.colorgraph {
+    height: 5px;
+    border-top: 0;
+    background: #c4e17f;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+/********************************************************/
+/*                    Home Content                      */
+/********************************************************/
+h1.page-header {
+    margin-top: -5px;
+}
+
+.sidebar {
+    padding-left: 0;
+}
+
+.main-container {
+    background: #FFF;
+    padding-top: 15px;
+    margin-top: -20px;
+}
+
+.footer {
+    width: 100%;
+}
+
+.navbar-login
+{
+    width: 305px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+/********************************************************/
+/*                       Nav Login                      */
+/********************************************************/
+.navbar-login-session
+{
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.icon-size
+{
+    font-size: 87px;
+}
+
+/*=============================================================
+    Authour URL: www.designbootstrap.com
+    http://www.designbootstrap.com/
+    License: MIT
+========================================================  */
+
+.db-pricing-seven {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
+    border: 1px solid #C5C2C2;
+    background-color: #EDEDED;
+}
+
+.db-pricing-seven:hover {
+    margin-top: 5px;
+    -moz-transition: margin-top 0.25s ease 0s;
+    -ms-transition: margin-top 0.25s ease 0s;
+    transition: margin-top 0.25s ease 0s;
+}
+
+.db-pricing-seven ul {
+    list-style: none;
+    margin: 0;
+    text-align: center;
+    padding-left: 0px;
+}
+
+.db-pricing-seven ul li {
+    border-bottom: solid 1px #D8D8D8;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.db-pricing-seven ul li.price {
+    background-color: #fff;
+    padding: 40px 20px 20px 20px;
+    font-size: 20px;
+    font-weight: 900;
+    color: #353c3e;
+    font-weight: 900;
+}
+
+.db-pricing-seven ul li.price i {
+    padding: 30px;
+    font-size: 50px;
+    display: block;
+}
+
+
+.db-pricing-seven .pricing-footer {
+    padding: 20px;
+}
+
+.db-pricing-seven .pricing-footer a i {
+    margin: 5px;
+    top: 3px;
+}

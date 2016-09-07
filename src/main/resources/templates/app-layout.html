@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>E Municipality </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/css/style.css" rel="stylesheet"/>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/myjquerydesign.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body ng-app="myApp">
+<div >
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    E Municipality
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-left" role="search" ng-controller="SearchCtrl">
+                    <div class="form-group">
+                        <input type="text" ng-model="qFaultStatus" class="form-control" placeholder="Search">
+                    </div>
+                    <a href="#/search"><button type="button" ng-click="searchFault()" class="btn btn-default"><i
+                            class="glyphicon glyphicon-search"></i></button></a>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown" ng-init="getLoginUser()">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <strong>{{loggedUser.firstName}}</strong>
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <div class="navbar-login nav">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <p class="text-center">
+                                                <span class="glyphicon glyphicon-user icon-size"></span>
+                                            </p>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <p class="text-left">{{loggedUser.firstName}}</p>
+                                            <p class="text-left small">{{loggedUser.emailAddress}}</p>
+                                            <p class="text-left">
+                                                <a href="" class="btn btn-primary btn-block btn-sm">Log Out</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container-fluid main-container">
+        <div class="col-md-2 sidebar">
+            <ul class="nav nav-pills nav-stacked">
+                <li ><a href="#/report">Report Fault</a></li>
+                <li ><a href="#/dashboard">Dashbaord</a></li>
+                <li><a href="#/faultlog">Fault Log</a></li>
+            </ul>
+        </div>
+        <div class="col-md-10 content">
+
+            <div ui-view></div>
+        </div>
+        <footer class="pull-left footer">
+            <p class="col-md-12">
+            <hr class="divider">
+            Copyright &COPY; 2016 <a href="">E_Municipality</a>
+            </p>
+        </footer>
+    </div>
+</div>
+</body>
+</html>

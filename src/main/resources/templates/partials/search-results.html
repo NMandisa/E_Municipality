@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p ng-init="getSearchFault()" ></p>
+<div class="col-md-4" ng-repeat="x in searchResult | orderBy:'faultTime'">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h4 class="text-center">
+                {{x.faultId}}</h4>
+        </div>
+        <div class="panel-body text-center">
+            <p class="lead">
+                <strong>{{x.faultStatus}}</strong></p>
+        </div>
+        <ul class="list-group list-group-flush text-center">
+            <li class="list-group-item"><i class="icon-ok text-danger"></i>{{x.location}}</li>
+            <li class="list-group-item"><i class="icon-ok text-danger"></i>{{x.faulttime}}</li>
+            <li class="list-group-item"><i class="icon-ok text-danger"></i>{{x.faultDesc}}</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

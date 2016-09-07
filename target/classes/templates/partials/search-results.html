@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Search Results Partial</h1>
+<p ng-init="getSearchFault()"></p>
+<div class="col-md-4" ng-repeat="x in searchResult | orderBy:'faultTime'">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h4 class="text-center">
+                PRO PLAN</h4>
+        </div>
+        <div class="panel-body text-center">
+            <p class="lead">
+                <strong>$10 / month</strong></p>
+        </div>
+        <ul class="list-group list-group-flush text-center">
+            <li class="list-group-item"><i class="icon-ok text-danger"></i>Personal use</li>
+            <li class="list-group-item"><i class="icon-ok text-danger"></i>Unlimited projects</li>
+            <li class="list-group-item"><i class="icon-ok text-danger"></i>27/7 support</li>
+        </ul>
+        <div class="panel-footer">
+            <a class="btn btn-lg btn-block btn-info" href="">BUY NOW!</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

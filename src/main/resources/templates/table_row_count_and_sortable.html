@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>Table row count and sortable - Bootsnipp.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/myjquerydesign.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body ng-app="myApp">
+<div class="container" ng-controller="AdminCtrl" >
+    <div class="row" ng-init="faultAllLog()">
+        <div class="col-md-12">
+            <div class="alert alert-info">
+                Please Wait...</div>
+            <div class="alert alert-success" style="display:none;">
+                <span class="glyphicon glyphicon-ok"></span> Drag table row and cange Order</div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Fault Description
+                        </th>
+                        <th>
+                            Fault Status
+                        </th>
+                        <th>
+                            Fault Time
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="active">
+                        <td>
+                            Column content
+                        </td>
+                        <td>
+                            Column content
+                        </td>
+                        <td>
+                            Column content
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Column content
+                        </td>
+                        <td>
+                            Column content
+                        </td>
+                        <td>
+                            Column content
+                        </td>
+                    </tr>
+                    <tr class="success">
+                        <td>
+                            Column content
+                        </td>
+                        <td>
+                            Column content
+                        </td>
+                        <td>
+                            Column content
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Column content
+                        </td>
+                        <td>
+                            Column content
+                        </td>
+                        <td>
+                            Column content
+                        </td>
+                    </tr>
+                    <tr class="warning">
+                        <td>
+                            Column content
+                        </td>
+                        <td>
+                            Column content
+                        </td>
+                        <td>
+                            Column content
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Column content
+                        </td>
+                        <td>
+                            Column content
+                        </td>
+                        <td>
+                            Column content
+                        </td>
+                    </tr>
+                    <tr class="danger">
+                        <td>
+                            Column content
+                        </td>
+                        <td>
+                            Column content
+                        </td>
+                        <td>
+                            Column content
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div ui-view ></div>
+</div>
+
+<script type="text/javascript">
+(function ($) {
+    $.fn.extend({
+        tableAddCounter: function (options) {
+
+            // set up default options 
+            var defaults = {
+                title: '#',
+                start: 1,
+                id: false,
+                cssClass: false
+            };
+
+            // Overwrite default options with user provided
+            var options = $.extend({}, defaults, options);
+
+            return $(this).each(function () {
+                // Make sure this is a table tag
+                if ($(this).is('table')) {
+
+                    // Add column title unless set to 'false'
+                    if (!options.title) options.title = '';
+                    $('th:first-child, thead td:first-child', this).each(function () {
+                        var tagName = $(this).prop('tagName');
+                        $(this).before('<' + tagName + ' rowspan="' + $('thead tr').length + '" class="' + options.cssClass + '" id="' + options.id + '">' + options.title + '</' + tagName + '>');
+                    });
+
+                    // Add counter starting counter from 'start'
+                    $('tbody td:first-child', this).each(function (i) {
+                        $(this).before('<td>' + (options.start + i) + '</td>');
+                    });
+
+                }
+            });
+        }
+    });
+})(jQuery);
+
+$(document).ready(function () {
+    $('.table').tableAddCounter();
+    $.getScript("http://code.jquery.com/ui/1.9.2/jquery-ui.js").done(function (script, textStatus) { $('tbody').sortable();$(".alert-info").alert('close');$(".alert-success").show(); });
+});
+</script>
+</body>
+</html>
